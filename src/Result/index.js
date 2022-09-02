@@ -1,4 +1,3 @@
-
 const Result = ({ result }) => (
     <p className="result"> Wynik:
         {" "}
@@ -9,7 +8,6 @@ const Result = ({ result }) => (
                 </strong>
             </>
         )}
-
     </p>
 );
 

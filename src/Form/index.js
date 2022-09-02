@@ -4,10 +4,8 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 
 const Form = ({ calculateResult, result }) => {
-
     const [currency, setCurrency] = useState(currencies[0].short);
     const [amount, setAmount] = useState("");
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -30,7 +28,7 @@ const Form = ({ calculateResult, result }) => {
                             name="amount"
                             required type="number"
                             min="1"
-                            step="any"
+                            step="0.01"
                             placeholder="Wpisz ilość w zł"
                             autofocus
                         />
