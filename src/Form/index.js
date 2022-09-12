@@ -13,8 +13,14 @@ const Form = ({ calculateResult, result }) => {
         calculateResult(amount, currency);
     };
 
+    const onFormReset = (event) => {
+        event.preventDefault();
+        setCurrency(currencies[0].short);
+        setAmount("");
+    };
+
     return (
-        <form onSubmit={onFormSubmit} className="form">
+        <form onSubmit={onFormSubmit} onReset={onFormReset} className="form">
             <Clock />
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
@@ -62,6 +68,7 @@ const Form = ({ calculateResult, result }) => {
             </fieldset>
             <p>
                 <button className="form__button">Przelicz walutę</button>
+                <button type="reset" class="form__button">Wyczyść</button>
             </p>
             <Result result={result} />
         </form>
