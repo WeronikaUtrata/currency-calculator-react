@@ -1,8 +1,8 @@
-import "./style.css";
 import Result from "../Result";
 import Clock from "../Clock";
 import { useState } from "react";
 import { currencies } from "../currencies";
+import { StyledFieldset, StyledLegend, StyledSpan, StyledInput, StyledSelect, Button } from "./styled";
 
 const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -22,15 +22,14 @@ const Form = ({ calculateResult, result }) => {
     return (
         <form onSubmit={onFormSubmit} onReset={onFormReset} className="form">
             <Clock />
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Kalkulator walut</legend>
+            <StyledFieldset>
+                <StyledLegend>Kalkulator walut</StyledLegend>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <StyledSpan>
                             Kwota w zł:
-                        </span>
-                        <input
-                            className="form__field"
+                        </StyledSpan>
+                        <StyledInput
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                             name="amount"
@@ -44,11 +43,10 @@ const Form = ({ calculateResult, result }) => {
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <StyledSpan>
                             Kurs:
-                        </span>
-                        <select
-                            className="form__field"
+                        </StyledSpan>
+                        <StyledSelect
                             value={currency}
                             name="currency"
                             required
@@ -62,13 +60,13 @@ const Form = ({ calculateResult, result }) => {
                                     {currency.name}
                                 </option>
                             ))};
-                        </select>
+                        </StyledSelect>
                     </label>
                 </p>
-            </fieldset>
+            </StyledFieldset>
             <p>
-                <button className="form__button">Przelicz walutę</button>
-                <button type="reset" class="form__button">Wyczyść</button>
+                <Button>Przelicz walutę</Button>
+                <Button type="reset">Wyczyść</Button>
             </p>
             <Result result={result} />
         </form>
