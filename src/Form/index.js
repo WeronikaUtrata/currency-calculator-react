@@ -20,7 +20,7 @@ const Form = ({ calculateResult, result }) => {
     };
 
     return (
-        <form onSubmit={onFormSubmit} onReset={onFormReset} className="form">
+        <form onSubmit={onFormSubmit} onReset={onFormReset}>
             <Clock />
             <StyledFieldset>
                 <StyledLegend>Kalkulator walut</StyledLegend>
