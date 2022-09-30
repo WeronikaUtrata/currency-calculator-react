@@ -9,6 +9,15 @@ This is my first short currency conventer, which is in Polish and converts amoun
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Technologies used:
+- HTML
+- CSS
+- BEM
+- JavaScript
+- Create React App
+- Styled-Components
+- React Hooks
+
 ## Available Scripts
 
 In the project directory, you can run:
