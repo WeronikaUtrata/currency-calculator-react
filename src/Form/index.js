@@ -2,7 +2,7 @@ import Result from "../Result";
 import Clock from "../Clock";
 import { useState } from "react";
 import { currencies } from "../currencies";
-import { StyledFieldset, StyledLegend, StyledSpan, StyledInput, StyledSelect, Button } from "./styled";
+import { StyledFieldset, StyledLegend, StyledLabel, StyledSpan, StyledInput, StyledSelect, Button } from "./styled";
 
 const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -24,8 +24,7 @@ const Form = ({ calculateResult, result }) => {
             <Clock />
             <StyledFieldset>
                 <StyledLegend>Kalkulator walut</StyledLegend>
-                <p>
-                    <label>
+                    <StyledLabel>
                         <StyledSpan>
                             Kwota w zł:
                         </StyledSpan>
@@ -39,10 +38,8 @@ const Form = ({ calculateResult, result }) => {
                             placeholder="Wpisz ilość w zł"
                             autofocus
                         />
-                    </label>
-                </p>
-                <p>
-                    <label>
+                    </StyledLabel>
+                    <StyledLabel>
                         <StyledSpan>
                             Kurs:
                         </StyledSpan>
@@ -61,8 +58,7 @@ const Form = ({ calculateResult, result }) => {
                                 </option>
                             ))};
                         </StyledSelect>
-                    </label>
-                </p>
+                    </StyledLabel>
             </StyledFieldset>
             <p>
                 <Button>Przelicz walutę</Button>

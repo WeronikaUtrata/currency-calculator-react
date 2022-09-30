@@ -14,6 +14,11 @@ export const StyledLegend = styled.legend`
     padding: 10px;
 `;
 
+export const StyledLabel = styled.label`
+    display: block;
+    margin-bottom: 15px;
+`;
+
 export const StyledSpan = styled.span`
     width: 100%;
     max-width: 200px;
