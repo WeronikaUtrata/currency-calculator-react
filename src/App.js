@@ -1,4 +1,4 @@
-import Container from './Container';
+import { StyledContainer } from './Container/styled';
 import Form from './Form';
 import { currencies } from './currencies';
 import { useState } from 'react';
@@ -18,12 +18,12 @@ function App() {
   };
 
   return (
-    <Container>
+    <StyledContainer>
       <Form 
       calculateResult={calculateResult}
       result={result}
       />
-    </Container>
+    </StyledContainer>
   );
 }
 
